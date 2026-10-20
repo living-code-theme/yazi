@@ -1,0 +1,56 @@
+{
+  "$schema": "https://living-code.dev/port.schema.json",
+  "schemaVersion": 1,
+  "name": "yazi",
+  "slug": "yazi",
+  "group": "CLI & TUI",
+  "emoji": "🦆",
+  "description": "Living Code for yazi. Repository-owned theme files, installation instructions and four color flavors.",
+  "homepage": "https://yazi-rs.github.io",
+  "quick": "See installation instructions",
+  "aliases": [
+    "yazi"
+  ],
+  "flavors": [
+    "night",
+    "frost",
+    "paper",
+    "signal"
+  ],
+  "files": [
+    "living-code-frost.yazi/LICENSE",
+    "living-code-frost.yazi/flavor.toml",
+    "living-code-frost.yazi/tmtheme.xml",
+    "living-code-night.yazi/LICENSE",
+    "living-code-night.yazi/flavor.toml",
+    "living-code-night.yazi/tmtheme.xml",
+    "living-code-paper.yazi/LICENSE",
+    "living-code-paper.yazi/flavor.toml",
+    "living-code-paper.yazi/tmtheme.xml",
+    "living-code-signal.yazi/LICENSE",
+    "living-code-signal.yazi/flavor.toml",
+    "living-code-signal.yazi/tmtheme.xml"
+  ],
+  "images": [
+    {
+      "flavor": "night",
+      "path": "images/night.png",
+      "alt": "yazi running Living Code Night"
+    },
+    {
+      "flavor": "frost",
+      "path": "images/frost.png",
+      "alt": "yazi running Living Code Frost"
+    },
+    {
+      "flavor": "paper",
+      "path": "images/paper.png",
+      "alt": "yazi running Living Code Paper"
+    },
+    {
+      "flavor": "signal",
+      "path": "images/signal.png",
+      "alt": "yazi running Living Code Signal"
+    }
+  ]
+}

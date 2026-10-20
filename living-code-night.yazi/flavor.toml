@@ -1,0 +1,117 @@
+# Living Code Night: https://github.com/living-code-theme/yazi
+# Syntax highlighting in the preview pane comes from tmtheme.xml next to this file.
+
+[mgr]
+cwd = { fg = "#00a692" }
+find_keyword = { fg = "#f0be6d", bold = true }
+find_position = { fg = "#bf91cd", bold = true }
+symlink_target = { fg = "#9ae0dd" }
+marker_copied = { fg = "#8acb83", bg = "#8acb83" }
+marker_cut = { fg = "#e96560", bg = "#e96560" }
+marker_marked = { fg = "#bf91cd", bg = "#bf91cd" }
+marker_selected = { fg = "#f0be6d", bg = "#f0be6d" }
+count_copied = { fg = "#05080b", bg = "#8acb83" }
+count_cut = { fg = "#05080b", bg = "#e96560" }
+count_selected = { fg = "#05080b", bg = "#f0be6d" }
+border_symbol = "│"
+border_style = { fg = "#1d2226" }
+
+[indicator]
+parent = { fg = "#e2e9ee", bg = "#12171a" }
+current = { fg = "#e2e9ee", bg = "#2d3438" }
+preview = { bg = "#12171a" }
+padding = { open = "", close = "" }
+
+[tabs]
+active = { fg = "#05080b", bg = "#00a692", bold = true }
+inactive = { fg = "#9ba0a2", bg = "#12171a" }
+
+[mode]
+normal_main = { fg = "#05080b", bg = "#00a692", bold = true }
+normal_alt = { fg = "#00a692", bg = "#12171a" }
+select_main = { fg = "#05080b", bg = "#f0be6d", bold = true }
+select_alt = { fg = "#f0be6d", bg = "#12171a" }
+unset_main = { fg = "#05080b", bg = "#bf91cd", bold = true }
+unset_alt = { fg = "#bf91cd", bg = "#12171a" }
+
+[status]
+overall = { fg = "#e2e9ee", bg = "#12171a" }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+perm_type = { fg = "#80b6d3" }
+perm_read = { fg = "#f0be6d" }
+perm_write = { fg = "#e96560" }
+perm_exec = { fg = "#8acb83" }
+perm_sep = { fg = "#747c80" }
+progress_label = { fg = "#e2e9ee", bold = true }
+progress_normal = { fg = "#00a692", bg = "#1d2226" }
+progress_error = { fg = "#e96560", bg = "#1d2226" }
+
+[which]
+cols = 3
+border = { fg = "#00a692" }
+mask = { fg = "#e2e9ee", bg = "#12171a" }
+cand = { fg = "#9ae0dd" }
+rest = { fg = "#747c80" }
+desc = { fg = "#bf91cd" }
+separator = "  "
+separator_style = { fg = "#747c80" }
+
+[confirm]
+border = { fg = "#00a692" }
+title = { fg = "#00a692" }
+body = { fg = "#e2e9ee" }
+list = { fg = "#e2e9ee" }
+btn_yes = { reversed = true }
+btn_no = {}
+btn_labels = ["  [Y]es  ", "  (N)o  "]
+
+[spot]
+border = { fg = "#00a692" }
+title = { fg = "#00a692" }
+tbl_col = { fg = "#00a692" }
+tbl_cell = { fg = "#f0be6d", bg = "#2d3438" }
+
+[notify]
+title_info = { fg = "#8acb83" }
+title_warn = { fg = "#f0be6d" }
+title_error = { fg = "#e96560" }
+
+[pick]
+border = { fg = "#00a692" }
+active = { fg = "#bf91cd", bold = true }
+inactive = { fg = "#e2e9ee" }
+
+[input]
+border = { fg = "#00a692" }
+title = {}
+value = {}
+selected = { reversed = true }
+
+[cmp]
+border = { fg = "#00a692" }
+active = { reversed = true }
+inactive = {}
+
+[tasks]
+border = { fg = "#00a692" }
+title = {}
+hovered = { fg = "#bf91cd", bold = true }
+
+[help]
+border = { fg = "#00a692" }
+chord = { fg = "#e18c5f" }
+action = { fg = "#9ae0dd" }
+hovered = { reversed = true, bold = true }
+
+[filetype]
+rules = [
+  { mime = "image/*", fg = "#e18c5f" },
+  { mime = "{audio,video}/*", fg = "#bf91cd" },
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#e96560" },
+  { mime = "application/{pdf,doc,rtf}", fg = "#f0be6d" },
+  { mime = "inode/empty", fg = "#747c80" },
+  { url = "*", is = "orphan", fg = "#e96560" },
+  { url = "*", is = "exec", fg = "#8acb83" },
+  { url = "*/", fg = "#00a692" },
+]
