@@ -229,14 +229,48 @@ hovered = { reversed = true, bold = true }
 
 [filetype]
 rules = [
-  { mime = "image/*", fg = "${f.c("copper")}" },
-  { mime = "{audio,video}/*", fg = "${f.c("orchid")}" },
-  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "${f.r("error")}" },
-  { mime = "application/{pdf,doc,rtf}", fg = "${f.r("warning")}" },
+  { mime = "**/image/*", fg = "${f.c("copper")}" },
+  { mime = "**/{audio,video}/*", fg = "${f.c("orchid")}" },
+  { mime = "**/application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "${f.r("error")}" },
+  { mime = "**/application/{pdf,doc,rtf}", fg = "${f.r("warning")}" },
+  { mime = "vfs/{absent,stale}", fg = "${f.r("fgSubtle")}" },
   { mime = "inode/empty", fg = "${f.r("fgSubtle")}" },
   { url = "*", is = "orphan", fg = "${f.r("error")}" },
   { url = "*", is = "exec", fg = "${f.r("success")}" },
+  { url = "*", fg = "${fg}" },
   { url = "*/", fg = "${accent}" },
+]
+
+[icon]
+dirs = [
+  { name = ".config", text = "", fg = "${f.c("orchid")}" },
+  { name = ".git", text = "", fg = "${accent}" },
+  { name = ".github", text = "", fg = "${f.r("info")}" },
+  { name = ".npm", text = "", fg = "${f.r("info")}" },
+  { name = "Desktop", text = "", fg = "${accent}" },
+  { name = "Development", text = "", fg = "${accent}" },
+  { name = "Documents", text = "", fg = "${accent}" },
+  { name = "Downloads", text = "", fg = "${accent}" },
+  { name = "Library", text = "", fg = "${accent}" },
+  { name = "Movies", text = "", fg = "${accent}" },
+  { name = "Music", text = "", fg = "${accent}" },
+  { name = "Pictures", text = "", fg = "${accent}" },
+  { name = "Public", text = "", fg = "${accent}" },
+  { name = "Videos", text = "", fg = "${accent}" },
+]
+conds = [
+  { if = "orphan", text = "", fg = "${f.r("error")}" },
+  { if = "link", text = "", fg = "${f.r("link")}" },
+  { if = "block", text = "", fg = "${f.c("copper")}" },
+  { if = "char", text = "", fg = "${f.c("copper")}" },
+  { if = "fifo", text = "", fg = "${f.c("copper")}" },
+  { if = "sock", text = "", fg = "${f.c("copper")}" },
+  { if = "sticky", text = "", fg = "${f.r("warning")}" },
+  { if = "dummy", text = "", fg = "${f.r("error")}" },
+  { if = "dir & hovered", text = "", fg = "${accent}" },
+  { if = "dir", text = "", fg = "${accent}" },
+  { if = "exec", text = "", fg = "${f.r("success")}" },
+  { if = "!dir", text = "", fg = "${fg}" },
 ]
 `;
 }

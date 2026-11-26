@@ -106,12 +106,46 @@ hovered = { reversed = true, bold = true }
 
 [filetype]
 rules = [
-  { mime = "image/*", fg = "#d49c80" },
-  { mime = "{audio,video}/*", fg = "#bc9ec6" },
-  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#d68079" },
-  { mime = "application/{pdf,doc,rtf}", fg = "#e9c897" },
+  { mime = "**/image/*", fg = "#d49c80" },
+  { mime = "**/{audio,video}/*", fg = "#bc9ec6" },
+  { mime = "**/application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#d68079" },
+  { mime = "**/application/{pdf,doc,rtf}", fg = "#e9c897" },
+  { mime = "vfs/{absent,stale}", fg = "#7d8489" },
   { mime = "inode/empty", fg = "#7d8489" },
   { url = "*", is = "orphan", fg = "#d68079" },
   { url = "*", is = "exec", fg = "#a2cb9d" },
+  { url = "*", fg = "#e2e9ee" },
   { url = "*/", fg = "#43a997" },
+]
+
+[icon]
+dirs = [
+  { name = ".config", text = "", fg = "#bc9ec6" },
+  { name = ".git", text = "", fg = "#43a997" },
+  { name = ".github", text = "", fg = "#98bacd" },
+  { name = ".npm", text = "", fg = "#98bacd" },
+  { name = "Desktop", text = "", fg = "#43a997" },
+  { name = "Development", text = "", fg = "#43a997" },
+  { name = "Documents", text = "", fg = "#43a997" },
+  { name = "Downloads", text = "", fg = "#43a997" },
+  { name = "Library", text = "", fg = "#43a997" },
+  { name = "Movies", text = "", fg = "#43a997" },
+  { name = "Music", text = "", fg = "#43a997" },
+  { name = "Pictures", text = "", fg = "#43a997" },
+  { name = "Public", text = "", fg = "#43a997" },
+  { name = "Videos", text = "", fg = "#43a997" },
+]
+conds = [
+  { if = "orphan", text = "", fg = "#d68079" },
+  { if = "link", text = "", fg = "#b6e2df" },
+  { if = "block", text = "", fg = "#d49c80" },
+  { if = "char", text = "", fg = "#d49c80" },
+  { if = "fifo", text = "", fg = "#d49c80" },
+  { if = "sock", text = "", fg = "#d49c80" },
+  { if = "sticky", text = "", fg = "#e9c897" },
+  { if = "dummy", text = "", fg = "#d68079" },
+  { if = "dir & hovered", text = "", fg = "#43a997" },
+  { if = "dir", text = "", fg = "#43a997" },
+  { if = "exec", text = "", fg = "#a2cb9d" },
+  { if = "!dir", text = "", fg = "#e2e9ee" },
 ]
